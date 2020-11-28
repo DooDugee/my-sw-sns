@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="SNS style.CSS">
+    <title>SNS</title>
+</head>
+<body>
+    <h2>Social network service</h2>
+    <section id="sns">
+        <article class="card">
+            <div class="card_content">
+                <h3>김세훈</h3>
+                <p>밝은 하늘 초승달?</p>
+                <img src="Moon Sky.JPG" alt="">
+            </div>
+        </article>
+    </section>
+
+    <div class="comment">
+        <div id="timeline">
+            <div class="container">
+                <p>댓글</p>
+                <textarea name="" id="postInput" cols="55" rows="3"></textarea>
+                <button onclick="snsPost()">작성</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let timeline = document.querySelector('#timeline');
+    
+        function snsPost() {
+            const postValue = document.querySelector('#postInput').value
+            console.log(postValue);
+            timeline.innerHTML += '<div id = "timeline">'+
+                    '<div class="container">'+
+                    '<h5>김세훈</h5>'+
+                    '<div class="fakeimg">'+'<p>'+postValue+'</p>'+'</div>'+
+                    '</div>'+
+                    '</div>';
+        }
+    
+    </script>
+</body>
+</html>
